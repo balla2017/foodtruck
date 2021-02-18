@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "5.2.1"
+    id "com.github.sherter.google-java-format" version "0.9"
+}
+
+apply plugin: 'java'
+
+apply plugin: 'application'
+
+version '1.0-SNAPSHOT'
+
+mainClassName ='FoodTruckFinder'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.projectlombok:lombok:1.18.8'
+}
+
+sourceCompatibility = 11.0
+targetCompatibility = 11.0
+
+
+run{
+    standardInput = System.in
+}
